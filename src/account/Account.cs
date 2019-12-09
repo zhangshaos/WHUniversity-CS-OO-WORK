@@ -27,11 +27,15 @@ namespace cz {
     //      // 此处填入账号信息,参考Register()函数的注释
     //  };
     //  Error err = root.Register(ref register);
+    //  ...Check err...
     //  Dictionary<string, string> login = new Dictionary<string, string> {
     //      // 此处填入账号,和密码,参考Login()函数的注释
     //  };
     //  Error err = root.Login(ref login);
-    //  Dictionary<string, string> details = root.AccountDetails(账号, 密码); // 接下来解析details,参考AccountDetails()
+    //  ...Check err...
+    //  Dictionary<string, string> details = new Dictionary<string, string>();
+    //  Error err = root.AccountDetails(ref details, 账号, 密码);
+    //  ...Check err...
     public class Account {
         // 注册普通用户的账号
         // 输入: 注册信息
