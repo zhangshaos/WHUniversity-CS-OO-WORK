@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D36FAF6A-4A54-4036-B889-D0BA8CEFB854}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>图书馆系统APP</RootNamespace>
+    <AssemblyName>图书馆系统APP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Smobiler_128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.18\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Smobiler.Utility" />
+    <Reference Include="Smobiler.Core" />
+    <Reference Include="Smobiler.Core.Controls" />
+    <Reference Include="Smobiler.Plugins" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interface\AdministratorInterface.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\AdministratorInterface.Designer.cs">
+      <DependentUpon>AdministratorInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppServer\Account.cs" />
+    <Compile Include="AppServer\Exhibit.cs" />
+    <Compile Include="AppServer\ManagerSystem.cs" />
+    <Compile Include="AppServer\superaccount.cs" />
+    <Compile Include="Interface\ChooseSeatConditionInterface.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\ChooseSeatConditionInterface.Designer.cs">
+      <DependentUpon>ChooseSeatConditionInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerateQRcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerateQRcode.Designer.cs">
+      <DependentUpon>frmGenerateQRcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\RegiterInterface.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\RegiterInterface.Designer.cs">
+      <DependentUpon>RegiterInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ResourceManageInterface.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\ResourceManageInterface.Designer.cs">
+      <DependentUpon>ResourceManageInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MobileGlobal.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\SeatSearchResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\SeatSearchResult.Designer.cs">
+      <DependentUpon>SeatSearchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\RemoveUserInterface.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\RemoveUserInterface.Designer.cs">
+      <DependentUpon>RemoveUserInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Interface\LoginInterface.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\LoginInterface.Designer.cs">
+      <DependentUpon>LoginInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\CommonUserInterface.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\CommonUserInterface.Designer.cs">
+      <DependentUpon>CommonUserInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempStore.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TempStore.Designer.cs">
+      <DependentUpon>TempStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\UserInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Interface\AdministratorInterface.resx">
+      <DependentUpon>AdministratorInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\ChooseSeatConditionInterface.resx">
+      <DependentUpon>ChooseSeatConditionInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\CommonUserInterface.resx">
+      <DependentUpon>CommonUserInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerateQRcode.resx">
+      <DependentUpon>frmGenerateQRcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\LoginInterface.resx">
+      <DependentUpon>LoginInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\RegiterInterface.resx">
+      <DependentUpon>RegiterInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\RemoveUserInterface.resx">
+      <DependentUpon>RemoveUserInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\ResourceManageInterface.resx">
+      <DependentUpon>ResourceManageInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\SeatSearchResult.resx">
+      <DependentUpon>SeatSearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempStore.resx">
+      <DependentUpon>TempStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Smobiler_128.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
